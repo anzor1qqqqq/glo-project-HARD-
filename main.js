@@ -15,10 +15,17 @@ let arr = [
     ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 ];
 
-function foo(i) {
-    console.log(String(arr[i]));
-};
+switch (counter) {
+    case 0:
+    console.log(String(arr[0]));    
+    break;
 
-foo(counter);
+    case 1: 
+    console.log(String(arr[1]));
+    break;
+
+    default:
+    break;
+};
 
 nameG == 'Артем' ? console.log('директор')  : nameG == 'Александр' ? console.log('преподавватель') : console.log('студент');
