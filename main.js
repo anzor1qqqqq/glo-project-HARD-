@@ -1,31 +1,15 @@
 'use strict'
 
-const lang = document.documentElement.lang;
-let counter;
-let nameG = 'Анзор';
+const text = 'ffggjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh';
 
-if (lang == 'ru') {
-    counter = 0;
-} else {
-    counter = 1;
+const a = function (b) {
+    if (typeof(b) !== 'string') {
+        alert('В функцию передан другой тип данных'); 
+    } else {
+        b = b.trim();
+        if (b.length > 30) b = b.substring(30, 0) + '...';
+        console.log(b);
+    };
 };
 
-let arr = [
-    ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'],
-    ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-];
-
-switch (counter) {
-    case 0:
-    console.log(String(arr[0]));    
-    break;
-
-    case 1: 
-    console.log(String(arr[1]));
-    break;
-
-    default:
-    break;
-};
-
-nameG == 'Артем' ? console.log('директор')  : nameG == 'Александр' ? console.log('преподавватель') : console.log('студент');
+a(text);
