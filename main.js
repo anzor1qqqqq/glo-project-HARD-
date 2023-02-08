@@ -1,12 +1,12 @@
 'use strict'
 
+const lessonOne = document.querySelector('.lesson_one');
+const lessonTwo = document.querySelector('.lesson_two');
+
+const arrMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+const arrWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+
 let startTime = () => {
-    const lessonOne = document.querySelector('.lesson_one');
-    const lessonTwo = document.querySelector('.lesson_two');
-
-    const arrMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-    const arrWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-
     const date = new Date();
     const todayDay = date.getDate();
     const todayYear = date.getFullYear();
@@ -23,9 +23,9 @@ let startTime = () => {
         return date.getDay() === index;
     });
 
-    if (hours === 1 || hours === 13) {
+    if (hours === 1 || hours === 13 || hours === 21) {
         hourText = 'час';
-    } else if (hours >= 2 && hours <= 4)  {
+    } else if (hours >= 2 && hours <= 4 || hours === 22 || hours === 23)  {
         hourText = 'часа';
     } else {
         hourText = 'часов';
